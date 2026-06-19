@@ -1,95 +1,189 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Website Pribadi</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kopi Nusantara</title>
 
-  <style>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:Arial, sans-serif;
-    }
+body{
+    background:#f5f5f5;
+    scroll-behavior:smooth;
+}
 
-    body{
-      height:100vh;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      background:linear-gradient(to right,#141e30,#243b55);
-      color:white;
-    }
+/* NAVBAR */
+nav{
+    background:#3e2723;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    position:sticky;
+    top:0;
+}
 
-    .card{
-      width:350px;
-      background:rgba(255,255,255,0.1);
-      padding:40px;
-      border-radius:20px;
-      text-align:center;
-      backdrop-filter:blur(10px);
-      box-shadow:0 0 20px rgba(0,0,0,0.3);
-    }
+nav .logo{
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+}
 
-    .profile-img{
-      width:120px;
-      height:120px;
-      border-radius:50%;
-      object-fit:cover;
-      border:4px solid white;
-      margin-bottom:20px;
-    }
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
 
-    h1{
-      margin-bottom:10px;
-      font-size:30px;
-    }
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
 
-    p{
-      margin-bottom:20px;
-      color:#ddd;
-    }
+nav ul li a:hover{
+    color:#ffcc80;
+}
 
-    .btn{
-      display:inline-block;
-      padding:12px 20px;
-      margin:5px;
-      background:#ff9800;
-      color:white;
-      text-decoration:none;
-      border-radius:10px;
-      transition:0.3s;
-    }
+/* HEADER */
+header{
+    background:#4e342e;
+    color:white;
+    text-align:center;
+    padding:40px;
+}
 
-    .btn:hover{
-      transform:scale(1.05);
-      background:#ffb74d;
-    }
+header h1{
+    font-size:40px;
+}
 
-  </style>
+/* SECTION */
+section{
+    padding:60px 40px;
+    text-align:center;
+}
+
+/* HERO */
+.hero img{
+    width:300px;
+    border-radius:10px;
+}
+
+.hero h2{
+    margin-top:20px;
+    color:#4e342e;
+}
+
+/* PRODUK */
+.card{
+    background:white;
+    max-width:350px;
+    margin:auto;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.card h3{
+    color:#4e342e;
+    margin-bottom:10px;
+}
+
+.card p{
+    margin-bottom:15px;
+}
+
+.harga{
+    font-size:24px;
+    color:#d35400;
+    font-weight:bold;
+}
+
+button{
+    background:#4e342e;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+    background:#3e2723;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+</style>
+
 </head>
-
 <body>
 
-  <div class="card">
+<!-- NAVIGATION -->
+<nav>
+    <div class="logo">Kopi Nusantara</div>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#produk">Produk</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-    <img src="foto.jpg.jpg" class="profile-img">
+<!-- HOME -->
+<header id="home">
+    <h1>Kopi Nusantara PADAT</h1>
+    <p>Nikmati Aroma dan Cita Rasa Kopi Pilihan</p>
+</header>
 
-    <h1>Erlando Aviero</h1>
-
+<!-- TENTANG -->
+<section id="tentang">
+    <h2>Tentang Kami</h2>
     <p>
-      Halo, saya seorang mahasiswa yang sangat berbahaya.
+        Kopi Nusantara adalah brand kopi lokal yang menghadirkan cita rasa khas Indonesia,
+        khususnya dari Manggarai. Diproses dari biji kopi pilihan dengan kualitas terbaik.
     </p>
+</section>
 
-    <a href="#" class="btn">iqperdo</a>
+<!-- HERO / PRODUK UTAMA -->
+<section class="hero">
+    <img src="padat.jpg.jpeg" alt="Produk Kopi">
+    <h2>Kopi Bubuk Premium</h2>
+    <p>Dibuat dari biji kopi pilihan dengan cita rasa khas MANGGARAI.</p>
+</section>
 
-    <a href="#" class="btn">erlandooo</a>
+<!-- PRODUK -->
+<section id="produk">
+    <h2>Produk Kami</h2>
+    <br>
+    <div class="card">
+        <h3>Kopi Bubuk Arabika</h3>
+        <p>Kopi berkualitas tinggi dengan aroma harum dan rasa yang khas.</p>
+        <div class="harga">Rp40.000</div>
+        <br>
+        <button>Beli Sekarang</button>
+    </div>
+</section>
 
-    <a href="#" class="btn">082341638507</a>
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Hubungi kami jika ingin order atau kerja sama:</p>
+    <p><b>WhatsApp:</b> 0823-4163-8507</p>
+    <p><b>Email:</b> kopinusantara@gmail.com</p>
+</section>
 
-  </div>
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Kopi Nusantara | All Rights Reserved</p>
+</footer>
 
 </body>
 </html>
